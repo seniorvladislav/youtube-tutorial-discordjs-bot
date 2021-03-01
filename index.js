@@ -27,13 +27,13 @@ client.on("message", (msg) => {
   const command = msg.content.toLowerCase().slice(prefix.length);
 
   if (command === "дата") {
-    const date = new Date().toLocaleDateString();
+    const date = new Date().toLocaleDateString("RU");
     msg.channel.send(`Сейчас на сервере: ${date}`);
   } else if (command === "время") {
-    const time = new Date().toLocaleTimeString();
+    const time = new Date().toLocaleTimeString("RU");
     msg.channel.send(`Время на сервере: ${time}`);
   } else if (command === "датавремя") {
-    const date = new Date().toLocaleString();
+    const date = new Date().toLocaleString("RU");
     msg.channel.send(date);
   } else if (command.match(/ава|avatar/)) {
     const user = msg.mentions.users.first() || msg.author;
