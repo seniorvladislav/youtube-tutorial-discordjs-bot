@@ -1,5 +1,5 @@
 const { guildId, COLORS } = require("../config.json");
-const welcomeChannelId = "ID канала #добро-пожаловать на твоём сервере";
+const welcomeChannelId = "815880962297954304";
 const { MessageEmbed } = require("discord.js");
 
 function trackMemberLog(client, member, hasLeft = false) {

@@ -4,7 +4,14 @@ const trackMemberLog = require("./utils/trackMemberLog");
 
 const client = new Client();
 
-const { token, prefix, THE_CAT_API_KEY } = require("./config.json");
+const { prefix } = require("./config.json");
+
+// Если бот запущен локально, и только тогда
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
+const { TOKEN, THE_CAT_API_KEY } = process.env;
 
 client.on("ready", () => {
   console.log(`Успешное подключение к боту`);
